@@ -13,6 +13,17 @@ class sumRow{
 				a[i][j]=sc.nextInt();
 			}
 	}
+	void displayMatrix()
+	{
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(a[i][j]+"   ");
+			}
+			System.out.println();
+		}
+	}
 	void sumofRow()
 	{
 		int i,j,sum;
@@ -23,7 +34,7 @@ class sumRow{
 			{
 				sum=sum+a[j][i];
 			}
-			System.out.println(sum);
+			System.out.println((i+1)+" Row Sum :"+sum);
 		}
 	}
 }
@@ -33,6 +44,11 @@ public class Sum_of_Row {
 	public static void main(String[] args) {
 		sumRow sr=new sumRow();
 		sr.getdat();
+		System.out.println();
+		System.out.println("Matrix:");
+		sr.displayMatrix();
+		System.out.println();
+		System.out.println("Sum of Row:");
 		sr.sumofRow();
 		// TODO Auto-generated method stub
 
